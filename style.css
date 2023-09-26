@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Tangerine", cursive;
+    background-color: #2e2525;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.piano__title {
+    text-align: center;
+    font-size: 90px;
+    line-height: 90px;
+    color: #ffffff;
+}
+
+.piano__inner {
+    display: flex;
+}
+
+.piano__btn {
+    background: #eedede;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.42);
+    border-radius: 2px;
+    width: 50px;
+    height: 150px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.piano__btn + .piano__btn {
+    margin-left: 19px;
+}
+
+.piano__btn:nth-child(even) {
+    background: #383333;
+}
+
+.left__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 102vh;
+    animation: left 2s linear forwards 1;
+}
+
+@keyframes left {
+    100%{
+        left: -100vh;
+    }
+}
+
+
+.right__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 102vh;
+    animation: right 2s linear forwards 1;
+}
+
+
+
+
+@keyframes right {
+    100%{
+        right: -100vh;
+    }
+}
